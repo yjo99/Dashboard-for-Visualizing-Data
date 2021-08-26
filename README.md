@@ -1,3 +1,6 @@
+# Dashboard-for-Visualizing-Data
+
+
 The goal of this project is to study machine learning models and
 create an interactive program that allows users to enter datasets
 and parameters in a given model and view processed data
