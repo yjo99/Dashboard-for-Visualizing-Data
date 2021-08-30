@@ -16,6 +16,6 @@ is created and can be adjusted in real-time by changing the model
 parameters.
 
 The creators of the project:
-  Yousef Sayed
-  Sherif A.Dawoud
-  Yehya Mohammed
+  Yousef Sayed, 
+  Sherif A.Dawoud, 
+  Yehya Mohammed.
