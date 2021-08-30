@@ -15,4 +15,7 @@ information, Then the visual representation of the processed data
 is created and can be adjusted in real-time by changing the model
 parameters.
 
-Yousef.
+The creators of the project:
+  Yousef Sayed
+  Sherif A.Dawoud
+  Yehya Mohammed
