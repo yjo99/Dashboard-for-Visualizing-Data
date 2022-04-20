@@ -94,12 +94,9 @@ if sections=='ML Algorithms':
 
             X,y=get_dataset_c(dataset_name)
             table = data_frame(dataset_name)
-            #st.write(" __The Table Of Data__ ",pd.DataFrame(table))
             st.write("__Summarize Of Data__ ",pd.DataFrame(table).head())
             st.write(" __The Shape Of Data__ ",X.shape)
             st.write(" __Descriptive Statistics for Each Column Of Data__ ",table.describe())
-            #for i, v in enumerate(table.columns):
-            #    st.write(i, v)
             
             
             #add the parameter for the classifier algos like K and C 
@@ -165,9 +162,7 @@ if sections=='ML Algorithms':
             acc=accuracy_score(y_test,y_pred)
 
 
-            #st.write(f"__classifier: {classifier_name}__")
             st.write(f"__Mean absolute percentage error : {acc}__")
-            #st.write(f"__Accuracy percentage : {accpercentage}__")
 
             pca = PCA(2)
             X_projected = pca.fit_transform(X)
@@ -375,7 +370,6 @@ if sections=='ML Algorithms':
             #the shape of data 
             X,y=get_dataset_r(dataset_name)
             table = get_data(dataset_name)
-            #st.write(" __The Table Of Data__ ",pd.DataFrame(table))
             st.write("__Summary Of Data__ ",pd.DataFrame(table).head())
             st.write(" __The Shape Of Data__ ",X.shape)
             st.write(" __Descriptive Statistics for Each Column Of Data__ ",table.describe())
@@ -425,7 +419,6 @@ if sections=='ML Algorithms':
                 if reg_name == "KNeighborsRegressor":
                     reg = KNeighborsRegressor(n_neighbors=params["n_neighbors"])          
                 elif reg_name == "LinearRegressor":
-                    #Parameter_Name = params["LinearRegressionFeatures"]
                     reg= LinearRegression(fit_intercept=False)   
                 elif reg_name =="SVM":
                     reg=LinearSVR(C=params["C"])
@@ -457,7 +450,6 @@ if sections=='ML Algorithms':
             acc=mean_absolute_percentage_error(y_test,y_pred)
 
 
-            #st.write(f"__regressor:{regressor_name}__")
             st.write(f"__Mean absolute percentage error :{acc}__")
 
             #plot
@@ -693,8 +685,6 @@ elif sections=='Data Wrangling':
 
     if data_file is not None:
         st.title('Explore the Dataset')
-        # st.write(f'__File Name : {data_file.name}__')
-        # a.encode('utf-8').strip()
         df = pd.read_csv(data_file) # encoding= 'unicode_escape'
         if st.checkbox('Show raw Data'):
             st.dataframe(df)
